@@ -51,8 +51,8 @@
         <test.pattern.integration>**/*IntegrationTest.java</test.pattern.integration>
 
         <!-- Spring  properties -->
-        <version.spring.boot>2.7.4</version.spring.boot>                                                            <!-- Last updated: 2022-10-16 -->
-<!--        <log4j2.version>2.19.0</log4j2.version> &lt;!&ndash; Forces Spring to use this version of log4j2 &ndash;&gt;                &lt;!&ndash; Last updated: 2022-10-16 &ndash;&gt;-->
+        <version.spring.boot>2.7.4</version.spring.boot>
+        <version.javafx>19</version.javafx>
 
         <!-- Maven plugins version properties. -->
         <version.maven.plugin.compiler>3.10.1</version.maven.plugin.compiler>
@@ -69,13 +69,14 @@
         <version.plugin.maven.docker>0.37.0</version.plugin.maven.docker>
         <version.plugin.maven.sonarscource.scanner>3.9.1.2184</version.plugin.maven.sonarscource.scanner>
         <version.plugin.maven.jacoco>0.8.8</version.plugin.maven.jacoco>
+        <version.plugin.maven.javafx>0.0.8</version.plugin.maven.javafx>
 
         <!-- Dependencies version properties -->
-        <version.springdoc.openapi>1.6.6</version.springdoc.openapi>                                                <!-- Last updated: 2022-09-21 -->
+        <version.springdoc.openapi>1.6.6</version.springdoc.openapi>
         <version.google.guava>31.1-jre</version.google.guava>
-        <version.junit.jupiter>5.9.1</version.junit.jupiter>                                                        <!-- Last updated: 2022-09-21 -->
-        <version.junit.platform.launcher>1.9.1</version.junit.platform.launcher>                                    <!-- Last updated: 2022-10-16 -->
-        <version.datafaker>1.6.0</version.datafaker>                                                                <!-- Last updated: 2022-10-16 -->
+        <version.junit.jupiter>5.9.1</version.junit.jupiter>
+        <version.junit.platform.launcher>1.9.1</version.junit.platform.launcher>
+        <version.datafaker>1.6.0</version.datafaker>
         <version.apache.commons.lang.3>3.9</version.apache.commons.lang.3>
         <version.apache.commons.io>2.11.0</version.apache.commons.io>
         <version.lombok>1.18.24</version.lombok>
@@ -195,38 +196,6 @@
 
         <dependencies>
 
-            <!-- Spring Boot BOM (Bill Of Materials) -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${version.spring.boot}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter</artifactId>
-                <version>${version.spring.boot}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
-                <version>${version.spring.boot}</version>
-                <scope>test</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>junit</groupId>
-                        <artifactId>junit</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.junit.vintage</groupId>
-                        <artifactId>junit-vintage-engine</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
             <!-- JUnit Jupiter (Junit 5) -->
             <dependency>
                 <groupId>org.junit.platform</groupId>
@@ -250,52 +219,9 @@
             </dependency>
 
             <dependency>
-                <groupId>dev.fuxing</groupId>
-                <artifactId>hibernate-validator-enum</artifactId>
-                <version>${version.hibernate.validator}</version>
-            </dependency>
-
-            <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${version.lombok}</version>
-            </dependency>
-
-            <!-- OpenAPI/Swagger - Automate generation of API documentation using Spring -->
-            <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-ui</artifactId>
-                <version>${version.springdoc.openapi}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>${version.apache.commons.lang.3}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>commons-io</groupId>
-                <artifactId>commons-io</artifactId>
-                <version>${version.apache.commons.io}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>net.datafaker</groupId>
-                <artifactId>datafaker</artifactId>
-                <version>${version.datafaker}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${version.google.guava}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.hemajoo</groupId>
-                <artifactId>hemajoo-utilities</artifactId>
-                <version>${version.hemajoo}</version>
             </dependency>
 
         </dependencies>
