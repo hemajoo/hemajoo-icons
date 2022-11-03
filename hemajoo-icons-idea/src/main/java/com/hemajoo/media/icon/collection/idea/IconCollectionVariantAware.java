@@ -1,9 +1,9 @@
 package com.hemajoo.media.icon.collection.idea;
 
-public interface IconCollectionCategoryAware
+public interface IconCollectionVariantAware
 {
     /**
-     * Return the category name.
+     * Return the variant name.
      * @return Name.
      */
     String name();

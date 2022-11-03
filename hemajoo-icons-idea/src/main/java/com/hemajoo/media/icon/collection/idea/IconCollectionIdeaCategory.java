@@ -2,6 +2,11 @@ package com.hemajoo.media.icon.collection.idea;
 
 public enum IconCollectionIdeaCategory implements IconCollectionCategoryAware
 {
+    /**
+     * Special category each enumeration of icon categories should have!
+     */
+    ALL,
+
     ACTIONS,
 
     CHOOSER,
